@@ -1,0 +1,4 @@
+{
+    "searchBox" : "#search_product",
+    "searchButton" : "#submit_search > .fa"
+}
