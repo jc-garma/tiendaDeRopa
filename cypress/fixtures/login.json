@@ -1,0 +1,7 @@
+{
+    "loginLink" : ".shop-menu > .nav > :nth-child(4) > a",
+    "searchButton" : ".login-form > form > [type='email']",
+    "password" : "[type='password']",
+    "loginButton" : ".login-form > form > .btn",
+    "incorrectLoginBanner" : "ol > li"
+}
