@@ -7,13 +7,20 @@ describe('Search elements', () =>{
         cy.fixture('searchResult.json').then((searchResult) => {
             cy.get(searchResult.banner).should('contain','Searched Products');
         })
-
     })
     it('search for elements with no results', () => {
         cy.search('qwerty');
         cy.fixture('searchResult.json').then((searchResult) => {
             cy.get(searchResult.banner).should('contain','Searched Products');
         })
-
     })
+    it('search for elements with special code', () => {
+        cy.readFile('cypress/support/text/search.txt').then((text) => {
+            cy.search(text);
+        });
+        cy.fixture('searchResult.json').then((searchResult) => {
+            cy.get(searchResult.banner).should('contain','Searched Products');
+        })
+    })
+
 })
